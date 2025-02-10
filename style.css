@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 55px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.input::-webkit-color-swatch {
+    border-radius: 10px;
+    border: none;
+}
+.input::-moz-color-swatch {
+    border-radius: 10px;
+    border: none;
+}
+
+#container {
+    background-color: #D5F2BB;
+    height: 90vh;
+    margin: 5vh;
+    padding: 5vh;
+    border-radius: 1.5vh;
+}
+
+#heading {
+    margin: auto;
+    font-size: 4vh;
+    position: relative;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding: 2vh;
+    background-color: white;
+    width: 30vh;
+    border-radius: 1.5vh;
+}
+
+#select {
+    padding: 2vh;
+    display: flex;
+    margin: auto;
+    width: max-content;
+}
+
+#matrix input {
+    position: relative;
+    height: 25px;
+    width: 100px;
+    margin: 3%;
+    top: 14%;
+}
+
+#matrix {
+    margin: auto;
+    padding: 20px;
+    width: 60vh;
+    height: 60vh;
+    background-color: #D5F2BB;
+    border-radius: 1.5vh;    
+}
+
+#innerMatrix {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 0.5vh;
+    height: 90%;
+    width: 90%;
+    left: 5%;
+    top: 5%;
+}
+
+#innerMatrix a {
+    position: relative;
+    border-radius: 0.5vh;
+    background-color: white;
+    border: black solid 0.2vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vh;
+    text-align: center;
+    line-height: 140%;
+    color: black;
+    text-decoration: none;
+}
+
+ion-card {
+    padding: 0 20px 20px 0;
+}
+
+.winner {
+    color: lightgreen;
+}
+
+.loser {
+    color: red;
+}
+
+ion-card-content {
+    margin-left: 20px;
+}
+
+#history ion-card-content {
+    margin: 0 0 -20px -15px;
+    padding-top: 0;
+}
+
+#history ion-card-header {
+    margin-left: -15px;   
+}
+
+ion-button {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#history ion-button {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+ion-title {
+    text-align: center;
+}
+
+input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#matrixWrapper {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks flex items vertically */
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    height: 100%; /* Ensures the ion-content takes full height */
+    text-align: center; /* Centers the text, optional */
+}

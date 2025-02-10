@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+	<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ion-app>
+    <ion-header id="header">
+        <ion-toolbar>
+        <ion-title>Piškvorky</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="ion-padding">
+        <ion-tabs id="myTabs">
+            <ion-tab tab="radio" id="radio">
+              <ion-nav id="radio-nav"></ion-nav>
+              <div id="radio-page">
+                <ion-content class="ion-padding">
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title>Hráč č.1</ion-card-title>
+                        </ion-card-header>
+                        
+                        <ion-item>
+                            <ion-input id="inpt1" placeholder="Hráč č.1" label-placement="floating">
+                                <div slot="label">Jméno</div>
+                            </ion-input>
+                            <input type="color" id="clr1" value="#6F9FE5" class="input" />
+                        </ion-item>
+                    </ion-card>
+                    
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title>Hráč č.2</ion-card-title>
+                        </ion-card-header>
+
+                        <ion-item>
+                            <ion-input id="inpt2" placeholder="Hráč č.2" label-placement="floating">
+                                <div slot="label">Jméno</div>
+                            </ion-input>
+                            <input type="color" id="clr2" value="#E56F6F" class="input" />
+                        </ion-item>
+                    </ion-card>
+
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title>Hrací pole</ion-card-title>
+                        </ion-card-header>
+
+                        <ion-card-content>
+                            <ion-range id="size_range" min="3" max="20"></ion-range>
+                            <ion-label id="size_label">Velikost herního pole je 10</ion-label>
+                            <ion-range id="len_range" min="3" max="8"></ion-range>
+                            <ion-label id="len_label">Výherní délka je 5</ion-label>
+                        </ion-card-content>
+                    </ion-card>
+
+                    <ion-button onclick="reset()">HRÁT</ion-button>
+                </ion-content>
+              </div>
+            </ion-tab>
+
+            <ion-tab tab="home">
+                <ion-nav id="home-nav"></ion-nav>
+                <div id="home-page">
+                  <ion-content id="content">
+                      <div id="matrixWrapper">
+                          <ion-card id="matrix">
+                              <div id="innerMatrix"></div>
+                          </ion-card>
+                      </div>
+                  </ion-content>
+                </div>
+            </ion-tab>
+
+            <ion-tab tab="library">
+                <ion-nav id="library-nav"></ion-nav>
+                <div id="library-page">
+                    <ion-content id="history">
+
+                    </ion-content>
+                </div>
+            </ion-tab>
+            <ion-tab-bar slot="bottom" id="nav">
+                <ion-tab-button id="home-button" tab="home" disabled="true">
+                    <ion-icon name="game-controller-outline"></ion-icon>
+                    Hrát
+                </ion-tab-button>
+                <ion-tab-button tab="radio" selected="true">
+                    <ion-icon name="settings-outline"></ion-icon>
+                    Nastavení
+                </ion-tab-button>
+                <ion-tab-button tab="library">
+                    <ion-icon name="podium-outline"></ion-icon>
+                    Historie
+                </ion-tab-button>
+                </ion-tab-bar>
+          </ion-tabs>
+    </ion-content>
+
+</ion-app>
+
+<script src="script.js"></script>
+
+</body>
+</html>
